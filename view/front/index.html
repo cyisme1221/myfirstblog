@@ -75,7 +75,7 @@
 				<h4>Category List</h4>
 				<ul>
 					<?php foreach($cats as $c) {?>
-					<li><a href=""><?php echo $c['catname']; ?></a></li>
+					<li><a href="index.php?cat_id=<?php echo $c['cat_id'];?>"><?php echo $c['catname']; ?></a></li>
 					<?php }?>
 				</ul>
 			</aside>
