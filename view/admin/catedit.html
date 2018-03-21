@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Category Edit</title>
+
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/adm.css">
+
+</head>
+<body>
+	<header>
+		<h1>Blog Admin Page</h1>
+	</header>
+
+	<div id="main">
+		<div id="lside">
+			<aside>
+				<h4>栏目管理</h4>
+				<ul>
+					<li><a href="">category list</a></li>
+					<li><a href="">add category</a></li>
+				</ul>
+			</aside>
+
+			<aside>
+				<h4>Article Manage</h4>
+				<ul>
+					<li><a href="">article list</a></li>
+					<li><a href="">publish category</a></li>
+				</ul>
+			</aside>
+
+			<aside>
+				<h4>Self center</h4>
+				<ul>
+					<li><a href="">Change Password</a></li>
+					<li><a href="">Logout</a></li>
+				</ul>
+			</aside>
+		</div>
+
+		<div id="rside">
+			<form action="" method="post">
+				<div class="form-group">
+					<label>栏目名称：  </label>
+					<p>
+						<input type="text" name="catname" value="<?php echo $cat['catname'];?>">
+					</p>
+				</div>
+				<div class="form-group">
+					<label>&nbsp; </label>
+					<p>
+						<button type="submit">提交</button>
+					</p>
+				</div>
+				
+			</form>
+			
+		</div>
+	</div>
+	<footer>
+			Copyright &copy; 2018  CY
+	</footer>
+</body>
+</html>

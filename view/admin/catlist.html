@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Catlist</title>
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/adm.css">
+</head>
+<body>
+	<header>
+		<h1>Blog Admin Page</h1>
+	</header>
+
+	<div id="main">
+		<div id="lside">
+			<aside>
+				<h4>栏目管理</h4>
+				<ul>
+					<li><a href="">category list</a></li>
+					<li><a href="">add category</a></li>
+				</ul>
+			</aside>
+
+			<aside>
+				<h4>Article Manage</h4>
+				<ul>
+					<li><a href="">article list</a></li>
+					<li><a href="">publish category</a></li>
+				</ul>
+			</aside>
+
+			<aside>
+				<h4>Self center</h4>
+				<ul>
+					<li><a href="">Change Password</a></li>
+					<li><a href="">Logout</a></li>
+				</ul>
+			</aside>
+		</div>
+
+		<div id="rside">
+			<table>
+				<tr>
+					<td>序号</td>
+					<td>栏目名称</td>
+					<td>xxx</td>
+					<td>操作</td>
+				</tr>
+				<?php foreach($cat as $c) {?>
+				<tr>
+					<td><?php echo $c['cat_id'];?></td>
+					<td><?php echo $c['catname'];?></td>
+					<td><?php echo $c['num'];?></td>
+					<td>
+						<a href="catdel.php?cat_id=<?php echo $c['cat_id'] ;?>">DELETE</a> |
+						<a href="catedit.php?cat_id=<?php echo $c['cat_id'] ;?>">Edit</a>
+					</td>
+				</tr>
+				<?php }?>
+			</table>
+			
+		</div>
+	</div>
+	<footer>
+			Copyright &copy; 2018  CY
+	</footer>
+</body>
+</html>

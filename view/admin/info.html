@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8">
+	<title>Info</title>
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/adm.css">
+	
+	<style type="text/css">
+		.succ {
+			color: green;
+		}
+		.danger {
+			color: red;
+		}
+	</style>
+
+</head>
+<body>
+	<header>
+		<h1>Blog Admin Page</h1>
+	</header>
+
+	<div id="main">
+		<div id="lside">
+			<aside>
+				<h4>栏目管理</h4>
+				<ul>
+					<li><a href="">category list</a></li>
+					<li><a href="">add category</a></li>
+				</ul>
+			</aside>
+
+			<aside>
+				<h4>Article Manage</h4>
+				<ul>
+					<li><a href="">article list</a></li>
+					<li><a href="">publish category</a></li>
+				</ul>
+			</aside>
+
+			<aside>
+				<h4>Self center</h4>
+				<ul>
+					<li><a href="">Change Password</a></li>
+					<li><a href="">Logout</a></li>
+				</ul>
+			</aside>
+		</div>
+
+		<div id="rside">
+			<?php if($result == 'succ') {?>
+			<div class="succ"><?php echo $res;?></div> <?php } else if($result == 'fail') {?>
+
+			<div class="danger"> <?php echo $res;?> </div> <?php }?>
+
+		</div>
+	</div>
+	<footer>
+			Copyright &copy; 2018  CY
+	</footer>
+</body>
+</html>

@@ -1,0 +1,186 @@
+header {
+	background: white;
+	height: 156px;
+	padding: 40px 0px;
+	box-sizing: border-box;
+
+}
+
+header h1, header h4 {
+	width: 1100px;
+	margin: 0 auto;
+}
+
+header h1 {
+	font: 45px/60px '微软雅黑', '黑体', sans-serif;
+}
+
+header h4 {
+	font: 18px/30px '新宋体', '宋体', serif;
+	color:#999999;
+}
+
+body {
+	background: #EFEFEF;
+}
+
+nav {
+	background: #222;
+}
+
+nav ul {
+	width: 1100px;
+	height: 60px;
+	margin: 0 auto;
+}
+
+nav a {
+	display: block;
+	padding: 20px;
+	line-height: 20px;
+	color: white;
+	size: 15px;
+}
+nav li {
+	
+	float: left;
+	position: relative;
+}
+
+nav a:hover {
+	background: #3f3f3f;
+}
+
+nav img {
+	position: absolute;
+	top:0;
+	right: 0;
+}
+
+
+#main {
+	width: 1100px;
+	margin: 0 auto;
+}
+
+#main::after {
+	content: '';
+	height: 0px;
+	display: block;
+	clear: both;
+}
+
+#lside { 
+	width:805px;
+	min-height: 400px;
+	float: left;
+}
+
+#rside {
+	width:275px;
+	min-height: 400px;
+	float: right;
+}
+
+footer {
+	height: 60px;
+	padding: 20px 0px;
+	box-sizing: border-box;
+	background: #222;
+	text-align: center;
+	color: white;
+	font: 17px/22px '微软雅黑', '黑体', sans-serif;
+}
+
+
+
+aside {
+	background: white;
+	padding: 40px;
+	margin: 20px;
+}
+
+aside:first-child, article:first-child {
+	margin-top: 30px;
+}
+
+/*				aside:last-child {
+	margin-bottom: 0px;
+}
+*/
+aside h4 {
+	color: black;
+	font: 20px/24px '微软雅黑', '黑体', sans-serif;
+	margin-bottom: 40px;
+}
+
+aside a, aside:visited{
+	color: #1e73be;
+	font: 14px/24px '新宋体', '宋体', serif;
+}
+
+aside a:hover {
+	color: black;
+}
+
+aside input {
+	border: 1px solid #cccccc;
+	background: #fafafa;
+	width: 100%;
+	padding: 10px 5px;
+	box-sizing: border-box;
+	width: 100%;
+	font-size: 16px;
+}
+
+article {
+	background: white;
+	margin-bottom: 20px;
+	padding: 40px;
+}
+
+article h2 {
+	font: 30px/60px '微软雅黑', '黑体', sans-serif;
+}
+
+article a, article:visited {
+	color: #1e73be;
+}
+
+article a:hover {
+	color: black;
+}
+
+article:last-of-type {
+	margin-bottom: 0px;
+}
+
+
+.entry_header, .entry_header a{
+	color : #666666;
+	font-size: 12px;
+}
+
+.entry_header a:hover {
+	color: #1e73be;
+}
+
+.entry_content {
+	margin-top: 30px;
+	color: #3a3a3a;
+	font: 15px/22px '新宋体', '宋体', serif;
+}
+
+#pagebar {
+	font: 17px / 22px '微软雅黑', '黑体', sans-serif ;
+	color: #3a3a3a;
+	margin: 20px;
+}
+
+#pagebar a, #pagebar a:visited {
+	color: #1e73be;
+}
+
+#pagebar a:hover {
+	color: black;
+}
