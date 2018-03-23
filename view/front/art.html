@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Document</title>
+
+	
+	<link rel="stylesheet" type="text/css" href="./css/fontawesome-all.css">
+
+	<link rel="stylesheet" type="text/css" href="./css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+</head>
+<body>
+	<header>
+		<h1>Yuan's Blog</h1>
+		<h4>扬帆远航</h4>
+
+	</header>
+	
+	<nav>
+		<ul>	
+			<li><a href="">Homepage</a></li>
+			<li><a href="">Article</a></li>
+			<li><a href="">About</a></li>
+			<li>
+				<img src="./view/front/graduation.png" alt="">
+				<a href="">Contact</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div id="main">
+		<div id="lside">
+
+			<article>
+				<h2><a href="#"><?php echo $art['title'];?></a></h2>
+				<div class="entry_header">
+					<time><?php echo date('Y/m/d', $art['pubtime']);?></time>
+					by
+					<a href="#">李白</a>
+					<a class="catlink fas fa-folder-open" href="#" ><?php echo $art['catname'];?></a>
+					<a class="comment fas fa-comment " href="#" > <?php echo $art['comm'];?> 条评论</a>
+
+				</div>
+				<div class="entry_content">
+					<?php echo $art['content'];?>
+				</div>
+			</article>
+
+			<div id="comments">
+				<?php foreach($comms as $c)?>
+				<ol>
+					<li>
+						<img src="http://icons.iconarchive.com/icons/ph03nyx/super-mario/128/Mushroom-Mini-icon.png" alt="">
+						<cite><a href="#"><?php echo $c['nick'];?></a> </cite><br>
+						<time><?php echo date('Y/m/d', $c['pubtime']);?></time>
+					</li>
+					<li>
+						<?php echo $c['content'];?>
+					</li>
+				</ol>	
+			</div>
+		
+			<div id="respond" class="comment-respond">
+				<h3>Leave a Comment</h3>
+				<?php if(isset($rs) && ($rs == false)) {?>
+				<p style="color:red">Fail to leave comment</p>
+				<?php }?>
+				<form action=# method="post">
+					<p>
+						<input placeholder="Your name" name="nick" type="text" value="" size="30">
+					</p>
+					<p>
+						<input placeholder="Your Email" name="email" type="text" value="" size="30">
+					</p>
+					<p>
+						<textarea name="content" cols="45" rows="8" aria-required="true"></textarea> 
+					</p>
+					<p>
+						<input type="submit" name="" value="Post">
+					</p>
+				</form>
+			</div>
+
+		</div>
+		
+		<div id="rside"> 
+
+			<aside>
+				<form action="">
+					<input type="text" name="search" placeholder="search...">
+				</form>
+			</aside>
+
+			<aside>
+				<h4>Category List</h4>
+				<ul>
+					<?php foreach($cats as $c) {?>
+					<li><a href="index.php?cat_id=<?php echo $c['cat_id'];?>"><?php echo $c['catname']; ?></a></li>
+					<?php }?>
+				</ul>
+			</aside>
+
+			<aside>
+				<h4>测试标题2</h4>
+				<ul>
+					<li><a href="">article title1</a>(1)</li>
+					<li><a href="">article title2</a>(3)</li>
+					<li><a href="">article title3</a>(5)</li>
+					<li><a href="">article title4</a>(6)</li>
+				</ul>
+			</aside>
+
+			<aside>
+				<h4>测试标题3</h4>
+				<ul>
+					<li><a href="">article title1</a>(1)</li>
+					<li><a href="">article title2</a>(3)</li>
+					<li><a href="">article title3</a>(5)</li>
+					<li><a href="">article title4</a>(6)</li>
+				</ul>
+			</aside>
+
+			<aside>
+				<h4>测试标题4</h4>
+				<ul>
+					<li><a href="">article title1</a>(1)</li>
+					<li><a href="">article title2</a>(3)</li>
+					<li><a href="">article title3</a>(5)</li>
+					<li><a href="">article title4</a>(6)</li>
+				</ul>
+			</aside>
+		</div>
+		
+	</div>
+
+	<footer>
+		Copyright &copy 2018 ~ cy
+	</footer>
+
+</body>
+</html>

@@ -34,7 +34,7 @@
 			<?php foreach($arts as $a) {?>
 
 			<article>
-				<h2><a href="#"><?php echo $a['title'];?></a></h2>
+				<h2><a href="art.php?art_id=<?php echo $a['art_id'];?>"><?php echo $a['title'];?></a></h2>
 				<div class="entry_header">
 					<time><?php echo date('Y/m/d', $a['pubtime']);?></time>
 					by

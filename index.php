@@ -14,7 +14,7 @@ if(isset($_GET['cat_id'])) {
 }
 
 
-$sql = "select title, content, pubtime, comm, catname from art inner join cat on art.cat_id=cat.cat_id where 1 " . $where ;
+$sql = "select art_id, title, content, pubtime, comm, catname from art inner join cat on art.cat_id=cat.cat_id where 1 " . $where ;
 $arts = mGetAll($sql);
 
 //如果当前栏目下没有文章 跳转到首页去

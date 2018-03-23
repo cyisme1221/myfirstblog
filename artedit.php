@@ -23,7 +23,7 @@ $cats = mGetAll($sql);
 
 if(empty($_POST) ) {
 
-	$sql = "select cat_id, title, content from art where art_id=$art_id";
+	$sql = "select * from art where art_id=$art_id";
 	$art = mGetRow($sql);
 
 	include(ROOT. '/view/admin/artedit.html');
@@ -52,6 +52,19 @@ if(empty($_POST) ) {
 	
 	if( mExec('art', $art, 'update', "art_id=$art_id") ){
 		succ('文章修改成功');
+		//删除tag表中原有tag 再insert插入新的tag
+		$sql="delete from tag where art_id=$art_id";
+		mQuery($sql);
+
+		//添加新tag
+		$sql="insert into tag (art_id, tag) values ";
+		foreach ($tag as $v) {
+			$sql .= "(".$art_id . ", '" .$v . "'),";
+		}
+		$sql=trim($sql, ',');
+		if(mQuery($sql)){
+			succ('article updated');
+		}
 	}else {
 		error('文章修改失败');
 	}
