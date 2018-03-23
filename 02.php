@@ -2,8 +2,8 @@
 
 
 
-$ip='localhost';
+$ref=$_SERVER['HTTP_REFERER'];
 
 
-var_dump(sprintf($ip));
+print_r($ref);
 ?>
